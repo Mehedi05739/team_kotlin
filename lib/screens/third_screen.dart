@@ -13,44 +13,35 @@ class ThirdScreen extends StatelessWidget {
             children: [
 
               // Header Section
-              Row(
-                // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(50),
-                    child: Image.network(
-                        height: 50, width: 50, fit: BoxFit.cover,
-                        'https://www.shutterstock.com/image-photo/profile-picture-smiling-successful-young-260nw-2040223583.jpg'),
-                  ),
-                  SizedBox(width: 10,),
+              Row(children: [
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(50),
+                  child: Image.network(
+                    height: 50, width: 50, fit: BoxFit.cover,
+                    'https://www.shutterstock.com/image-photo/profile-picture-smiling-successful-young-260nw-2040223583.jpg'),
+                ),
+                SizedBox(width: 10),
 
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'Hello!',
-                        style: TextStyle(
-                          fontSize: 18,
-                          color: Colors.black,
-                        ),
-                      ),
-                      Text(
-                        'Livia Vaccaro',
-                        style: TextStyle(
-                          fontSize: 22,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ],
-                  ),
-                  Spacer(),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Hello!',
+                      style: TextStyle(fontSize: 18, color: Colors.black),
+                    ),
+                    Text(
+                      'Livia Vaccaro',
+                      style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+                    ),
+                  ],
+                ),
+                Spacer(),
 
-                  CircleAvatar(
-                    backgroundColor: Colors.grey[300],
-                    child: Icon(Icons.notifications, color: Colors.grey[700]),
-                  ),
-                ],
-              ),
+                CircleAvatar(
+                  backgroundColor: Colors.grey[300],
+                  child: Icon(Icons.notifications, color: Colors.grey[700]),
+                ),
+              ]),
 
               Expanded(
                 child: SingleChildScrollView(
@@ -62,51 +53,48 @@ class ThirdScreen extends StatelessWidget {
 
                       // Task Progress Section
                       Column(children: [
-                          Container(
-                            padding: EdgeInsets.all(16),
-                            decoration: BoxDecoration(
-                              color: Colors.indigo,
-                              borderRadius: BorderRadius.circular(20),
-                            ),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      "Your today's task\nalmost done!",
-                                      style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 18,
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                    ),
-                                    SizedBox(height: 10),
-                                    ElevatedButton(
-                                      style: ElevatedButton.styleFrom(
-                                        backgroundColor: Colors.white,
-                                        shape: RoundedRectangleBorder(
-                                          borderRadius: BorderRadius.circular(10),
-                                        ),
-                                      ),
-                                      onPressed: () {},
-                                      child: Text(
-                                        'View Task',
-                                        style: TextStyle(color: Colors.indigo),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                CircularProgressIndicator(
-                                  value: 0.85,
-                                  strokeWidth: 6,
-                                  backgroundColor: Colors.white54,
-                                  valueColor: AlwaysStoppedAnimation(Colors.white),
-                                ),
-                              ],
-                            ),
+                        Container(
+                          padding: EdgeInsets.all(16),
+                          decoration: BoxDecoration(
+                            color: Colors.indigo,
+                            borderRadius: BorderRadius.circular(20),
                           ),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    "Your today's task\nalmost done!",
+                                    style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold),
+                                  ),
+                                  SizedBox(height: 10),
+
+                                  ElevatedButton(
+                                    style: ElevatedButton.styleFrom(
+                                      backgroundColor: Colors.white,
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(10),
+                                      ),
+                                    ),
+                                    onPressed: () {},
+                                    child: Text(
+                                      'View Task',
+                                      style: TextStyle(color: Colors.indigo),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              CircularProgressIndicator(
+                                value: 0.85,
+                                strokeWidth: 6,
+                                backgroundColor: Colors.white54,
+                                valueColor: AlwaysStoppedAnimation(Colors.white),
+                              ),
+                            ],
+                          ),
+                        ),
                       ]),
                       SizedBox(height: 20),
 
@@ -116,6 +104,7 @@ class ThirdScreen extends StatelessWidget {
                         style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                       ),
                       SizedBox(height: 10),
+
                       Row(
                         children: [
                           Expanded(
@@ -127,6 +116,7 @@ class ThirdScreen extends StatelessWidget {
                             ),
                           ),
                           SizedBox(width: 10),
+
                           Expanded(
                             child: ProgressCard(
                               title: 'Uber Eats redesign challenge',
@@ -160,28 +150,6 @@ class ThirdScreen extends StatelessWidget {
                         );
                       })
 
-                      // ListView(
-                      //   children: [
-                      //     TaskGroupCard(
-                      //       title: 'Office Project',
-                      //       tasks: 23,
-                      //       progress: 0.7,
-                      //       color: Colors.pink[200]!,
-                      //     ),
-                      //     TaskGroupCard(
-                      //       title: 'Personal Project',
-                      //       tasks: 30,
-                      //       progress: 0.52,
-                      //       color: Colors.blue[100]!,
-                      //     ),
-                      //     TaskGroupCard(
-                      //       title: 'Daily Study',
-                      //       tasks: 30,
-                      //       progress: 0.87,
-                      //       color: Colors.green[200]!,
-                      //     ),
-                      //   ],
-                      // ),
                     ],
                   ),
                 ),
@@ -199,8 +167,7 @@ class ThirdScreen extends StatelessWidget {
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
           BottomNavigationBarItem(icon: Icon(Icons.search), label: 'Search'),
           BottomNavigationBarItem(icon: Icon(Icons.add), label: 'Add'),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.calendar_today), label: 'Calendar'),
+          BottomNavigationBarItem(icon: Icon(Icons.calendar_today), label: 'Calendar'),
           BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
         ],
       ),
