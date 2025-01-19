@@ -1,28 +1,4 @@
 import 'package:flutter/material.dart';
-// class ThirdScreen extends StatelessWidget {
-//   const ThirdScreen({super.key});
-//
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: AppBar(),
-//       body: Padding(
-//         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-//         child: Column(children: [
-//
-//           Container(
-//             height: 200, width: double.infinity,
-//             decoration: BoxDecoration(
-//               borderRadius: BorderRadius.circular(25),
-//               color: Colors.deepPurpleAccent,
-//             ),
-//           )
-//         ]),
-//       ),
-//     );
-//   }
-// }
-
 class ThirdScreen extends StatelessWidget {
   const ThirdScreen({super.key});
 
@@ -298,11 +274,19 @@ class TaskGroupCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(15),
       ),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        // mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
+
+          CircleAvatar(
+            backgroundColor: Colors.grey[300],
+            child: Icon(Icons.task, color: valueColor),
+          ),
+          SizedBox(width: 10),
+
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+
               Text(
                 title,
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
@@ -311,6 +295,8 @@ class TaskGroupCard extends StatelessWidget {
               Text('$tasks Tasks'),
             ],
           ),
+          Spacer(),
+
           CircularProgressIndicator(
             value: progress,
             strokeWidth: 6,
