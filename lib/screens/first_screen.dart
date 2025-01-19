@@ -32,6 +32,7 @@ class FirstScreen extends StatelessWidget {
               'assets/illustration.png', // Replace with your illustration asset
               height: MediaQuery.sizeOf(context).height * .6,
               width: MediaQuery.sizeOf(context).width,
+              fit:BoxFit.cover,
             ),
             Spacer(flex: 1),
             Padding(
