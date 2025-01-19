@@ -17,8 +17,8 @@ class ThirdScreen extends StatelessWidget {
                 ClipRRect(
                   borderRadius: BorderRadius.circular(50),
                   child: Image.network(
-                      height: 50, width: 50, fit: BoxFit.cover,
-                      'https://www.shutterstock.com/image-photo/profile-picture-smiling-successful-young-260nw-2040223583.jpg'),
+                    height: 50, width: 50, fit: BoxFit.cover,
+                    'https://www.shutterstock.com/image-photo/profile-picture-smiling-successful-young-260nw-2040223583.jpg'),
                 ),
                 SizedBox(width: 10),
 
@@ -141,14 +141,14 @@ class ThirdScreen extends StatelessWidget {
                           shrinkWrap: true,
                           physics: NeverScrollableScrollPhysics(),
                           itemBuilder: (context, index) {
-                            return TaskGroupCard(
-                              title: 'Office Project',
-                              tasks: 23,
-                              progress: 0.7,
-                              color: Colors.grey[200]!,
-                              valueColor: Colors.purple,
-                            );
-                          })
+                        return TaskGroupCard(
+                          title: 'Office Project',
+                          tasks: 23,
+                          progress: 0.7,
+                          color: Colors.grey[200]!,
+                          valueColor: Colors.purple,
+                        );
+                      })
 
                     ],
                   ),
