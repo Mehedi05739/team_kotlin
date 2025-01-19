@@ -3,12 +3,6 @@ import 'package:team_kotlin/screens/second_screen.dart';
 class FirstScreen extends StatelessWidget {
   const FirstScreen({super.key});
 
-  // void _onIntroEnd(context) {
-  //   Navigator.of(context).pushReplacement(
-  //     MaterialPageRoute(builder: (_) => const SecondScreen()),
-  //   );
-  // }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
