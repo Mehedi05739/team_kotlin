@@ -81,6 +81,7 @@ class FirstScreen extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
+                    Expanded(child: SizedBox(width: 10)),
                     Text(
                       "Let's Start",
                       style: TextStyle(
@@ -89,8 +90,10 @@ class FirstScreen extends StatelessWidget {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    SizedBox(width: 8),
+
+                    Expanded(child: SizedBox(width: 10)),
                     Icon(Icons.arrow_forward, color: Colors.white),
+                    SizedBox(width: 10),
                   ],
                 ),
               ),
